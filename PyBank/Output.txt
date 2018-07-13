@@ -1,0 +1,5 @@
+The total moth is : 41
+The total revenue is : 18971412
+The Average Change is : -6594.121951219512
+The Greatest increase is at Feb-16 : 1837235
+The Greatest decrease is at Aug-14 : -1779747

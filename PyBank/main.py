@@ -2,6 +2,7 @@ import os
 import csv
 
 budget_data = os.path.join("Resources", "budget_data.csv")
+text_file = open("Output.txt", "w")
 total_month=0
 total_Revenue=0
 maxN=0
@@ -17,7 +18,8 @@ with open(budget_data, newline="") as csvfile:
 
     # Read the header row first (skip this part if there is no header)
     csv_header = next(csvfile)
-    print(f"Header: {csv_header}")
+    
+
 
     # Read through each row of data after the header
     for row in csvreader:
@@ -37,9 +39,14 @@ with open(budget_data, newline="") as csvfile:
 
 
 print("The total moth is : "+str(total_month))  
+text_file.write("The total moth is : "+str(total_month)+"\n")
 print("The total revenue is : "+str(total_Revenue))
+text_file.write("The total revenue is : "+str(total_Revenue)+"\n")
 #print(str(averageAll))
 print("The Average Change is : "+str(averageAll/averageCount))
+text_file.write("The Average Change is : "+str(averageAll/averageCount)+"\n")
 print("The Greatest increase is at "+maxdate+" : "+str(maxN))
+text_file.write("The Greatest increase is at "+maxdate+" : "+str(maxN)+"\n")
 print("The Greatest decrease is at "+mindate+" : "+str(minN))
+text_file.write("The Greatest decrease is at "+mindate+" : "+str(minN)+"\n")
 
